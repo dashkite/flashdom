@@ -20,12 +20,16 @@ Similarity =
 
   threshold: 5
 
+  match: ( a, b ) ->
+    ((( a.id? && a.id != "" ) && ( a.id == b.id )) || 
+      ( a.isEqualNode b ))
+
   best: ( future, candidates ) ->
     do ({ diff, winner, min, candidate, score } = {}) ->
       winner = undefined
       min = Similarity.threshold
       for candidate in candidates
-        if ( future.isEqualNode candidate )
+        if Similarity.match future, candidate
           winner = candidate
           break
         else if ( future.tagName == candidate.tagName )
@@ -117,6 +121,11 @@ Diff =
       Array.from future.childNodes
     p = undefined
     for f in fx
+      # TODO first check for a match against the skip selector
+      #      if matches, use corresponding node in cx
+      #      if > 1 match, use Similarity.best with matching set
+      #      ex: selector is `data-skip` or `script` etc.
+      # TODO need a way to pass options? ex: skip selector
       if ( c = Similarity.best f, cx )?
         patches = [ patches..., ( Diff.nodes c, f )... ]
         patches.push Patch.move c, p, current

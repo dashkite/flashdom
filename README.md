@@ -1,4 +1,4 @@
-# FlashDOM
+# Flash DOM
 
 *Diff and patch the DOM*
 
