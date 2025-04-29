@@ -16,27 +16,30 @@ Types =
 
   text: 3
 
+Equal =
+  id: ( a, b ) -> a.id? && ( a.id != "" ) && ( a.id == b.id )
+
 Similarity =
 
   threshold: 5
-
-  match: ( a, b ) ->
-    ((( a.id? && a.id != "" ) && ( a.id == b.id )) || 
-      ( a.isEqualNode b ))
 
   best: ( future, candidates ) ->
     do ({ diff, winner, min, candidate, score } = {}) ->
       winner = undefined
       min = Similarity.threshold
       for candidate in candidates
-        if Similarity.match future, candidate
+        if future.isEqualNode candidate
           winner = candidate
           break
         else if ( future.tagName == candidate.tagName )
-          score = ( Diff.attributes candidate, future ).length
-          if score < min
+          if Equal.id future, candidate
             winner = candidate
-            min = score
+            break
+          else
+            score = ( Diff.attributes candidate, future ).length
+            if score < min
+              winner = candidate
+              min = score
       winner
 
 Patch =
