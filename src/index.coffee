@@ -124,11 +124,6 @@ Diff =
       Array.from future.childNodes
     p = undefined
     for f in fx
-      # TODO first check for a match against the skip selector
-      #      if matches, use corresponding node in cx
-      #      if > 1 match, use Similarity.best with matching set
-      #      ex: selector is `data-skip` or `script` etc.
-      # TODO need a way to pass options? ex: skip selector
       if ( c = Similarity.best f, cx )?
         patches = [ patches..., ( Diff.nodes c, f )... ]
         patches.push Patch.move c, p, current
