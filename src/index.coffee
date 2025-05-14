@@ -147,16 +147,16 @@ export { patch, diff }
 
 flash = Fn.curry Fn.binary do ->
 
-  ( Generic.make "DOM.flash" )
+  ( Generic.make "flashdom" )
   
     .define [ Node, Node ], ( target, node ) ->
       Log.duration "DOM updated", 
-        Time.measure "DOM.flash", ->
+        Time.measure "flashdom", ->
           patch diff target, [ node ]
       
     .define [ Node, Array ], ( target, nodes ) ->
       Log.duration "DOM updated", 
-        Time.measure "DOM.flash", ->
+        Time.measure "flashdom", ->
           patch diff target, nodes
 
     .define [( -> true ), String ], ( target, source ) ->
