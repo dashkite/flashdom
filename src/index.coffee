@@ -7,7 +7,7 @@ $ = ( selector ) -> document.querySelector selector
 
 Log =
   duration: ( action, { duration }) ->
-    console.log "%cdominator: 
+    console.log "%cflashdom: 
       #{ action } in
       #{ duration.toFixed 3 }ms",
       "color: cyan;"
