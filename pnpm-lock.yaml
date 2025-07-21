@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@dashkite/generic':
-        specifier: link:../generic
-        version: link:../generic
+        specifier: 0.9.0
+        version: 0.9.0
       '@dashkite/joy':
-        specifier: link:../joy
-        version: link:../joy
+        specifier: 0.11.0
+        version: 0.11.0
     devDependencies:
       '@dashkite/amen':
         specifier: ^0.2.2
@@ -48,8 +48,14 @@ packages:
   '@dashkite/assert@0.1.4':
     resolution: {integrity: sha512-OLOzI/lA+EwCh6znSexGAG1V4bkaT5gU04xl6ApEluv5jICnHhinZ707MObu+jhVVJ9uHDDlG85O+Afn1aTQoQ==}
 
+  '@dashkite/generic@0.9.0':
+    resolution: {integrity: sha512-Ho2pDNAEbO3WQFvZiPkhaaT2szgQKRWLXXwXgSzPjoVgmiVAptTWwsEmjDOWBtp254ZNhwk+F7jYpk+ZcJvyLQ==}
+
   '@dashkite/genie-release@0.2.14':
     resolution: {integrity: sha512-nCl/031ZlxwIXC6ThX7xv1HBKo4GVxesKU2d3PcWDrXe7heXGC7bjmxmS3ZVqhH9zXV7T+bDOsDWOOUMH2wciA==}
+
+  '@dashkite/joy@0.11.0':
+    resolution: {integrity: sha512-smTbfUK2CZGxKjTs5ZSTXYp8sC9vYUERA4NIN3Q4ArP8fiXpdJg3rA1tctd70ATHLB46Idac9AQ/g2KnNddrbQ==}
 
   '@dashkite/joy@0.3.16':
     resolution: {integrity: sha512-dsU0us4j1Pb+zceoBvLbnZ2PbmULkJUtM2vtWLxKmoc1DE4w9SVTiPTe6JWvF0A0vk90ldv+Lc9qEA5x3O+DtQ==}
@@ -107,10 +113,16 @@ snapshots:
     dependencies:
       '@dashkite/joy': 0.3.16
 
+  '@dashkite/generic@0.9.0':
+    dependencies:
+      '@dashkite/joy': 0.7.0
+
   '@dashkite/genie-release@0.2.14':
     dependencies:
       '@dashkite/zephyr': 0.12.1
       zx: 8.7.1
+
+  '@dashkite/joy@0.11.0': {}
 
   '@dashkite/joy@0.3.16': {}
 
