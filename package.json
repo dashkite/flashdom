@@ -38,7 +38,7 @@
     "@dashkite/genie": "^0.20.7",
     "@dashkite/genie-clean": "^0.13.3",
     "@dashkite/genie-coffee": "^0.13.3",
-    "@dashkite/genie-release": "^0.4.2"
+    "@dashkite/genie-release": "^0.4.3"
   },
   "dependencies": {
     "@dashkite/generic": "^0.9.3",
