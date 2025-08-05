@@ -35,13 +35,13 @@
     "@dashkite/amen": "^0.2.2",
     "@dashkite/amen-console": "^0.0.2",
     "@dashkite/assert": "^0.1.4",
-    "@dashkite/genie": "^0.20.8",
-    "@dashkite/genie-clean": "^0.13.4",
-    "@dashkite/genie-coffee": "^0.13.5",
+    "@dashkite/genie": "^0.20.9",
+    "@dashkite/genie-clean": "^0.13.5",
+    "@dashkite/genie-coffee": "^0.13.6",
     "@dashkite/genie-release": "^0.4.3"
   },
   "dependencies": {
-    "@dashkite/generic": "^0.9.4",
+    "@dashkite/generic": "^0.9.5",
     "@dashkite/joy": "^0.11.0"
   }
 }
