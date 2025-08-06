@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/flashdom",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Diff and patch the DOM",
   "keywords": [],
   "homepage": "https://github.com/dashkite/flashdom#readme",
