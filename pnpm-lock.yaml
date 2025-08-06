@@ -31,8 +31,8 @@ importers:
         specifier: ^0.13.6
         version: 0.13.6
       '@dashkite/genie-coffee':
-        specifier: ^0.13.7
-        version: 0.13.7
+        specifier: ^0.13.8
+        version: 0.13.8
       '@dashkite/genie-release':
         specifier: ^0.4.3
         version: 0.4.3
@@ -601,8 +601,8 @@ packages:
   '@dashkite/genie-clean@0.13.6':
     resolution: {integrity: sha512-zQVzI22mDjJu28Krzt4Alu60tb/8AmYFOJqLCdl4zVPWb9VUFhypW+NLrZ9uRSzGwvNdcVkmdOwFcscTeiwTdg==}
 
-  '@dashkite/genie-coffee@0.13.7':
-    resolution: {integrity: sha512-5Qx8tv/w49om6piimzbOQZFb/HtH49tgRF2YS6woP7DRt4tP56TVAaIPY1f4BqN2xDgbIJpGdhRO76tQLoolNQ==}
+  '@dashkite/genie-coffee@0.13.8':
+    resolution: {integrity: sha512-c3Mx/RNnESpYtgBHMTYK3AAWb9FTUr3TiFU5JvIYdDL0pFULkWur6/SyrUXau92lUQwn8io6ibWC2Bg2VvkuEA==}
 
   '@dashkite/genie-release@0.4.3':
     resolution: {integrity: sha512-9qqf7L80jmrRDPw0vhb475ed3hMDPWU782pH0bos4DdjyyObVHZePf26tgaeO9YSaFu4UC/RURxKKh+XmlqOIw==}
@@ -2134,7 +2134,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@dashkite/genie-coffee@0.13.7':
+  '@dashkite/genie-coffee@0.13.8':
     dependencies:
       '@dashkite/masonry': 0.21.0
       '@dashkite/masonry-coffee': 0.10.0
