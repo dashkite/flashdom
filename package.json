@@ -36,8 +36,8 @@
     "@dashkite/amen-console": "^0.0.2",
     "@dashkite/assert": "^0.1.4",
     "@dashkite/genie": "^0.20.12",
-    "@dashkite/genie-clean": "^0.13.9",
-    "@dashkite/genie-coffee": "^0.13.10",
+    "@dashkite/genie-clean": "^0.13.10",
+    "@dashkite/genie-coffee": "^0.13.11",
     "@dashkite/genie-release": "^0.4.3"
   },
   "dependencies": {
