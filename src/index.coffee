@@ -160,13 +160,14 @@ flash = Fn.curry Fn.binary do ->
           patch diff target, nodes
 
     .define [( -> true ), String ], ( target, source ) ->
-      dom = undefined
+      elements = undefined
       Log.duration "HTML parsed", 
         Time.measure "html parse", ->
-          dom = Document
+          elements = Document
             .parseHTMLUnsafe source
             .body
-      flash target, dom
+            .children
+      flash target, [ elements... ]
         
     .define [ String, ( -> true ) ], ( target, html ) ->
         if ( target = $ target )?
