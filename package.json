@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/flashdom",
-  "version": "0.1.18",
+  "version": "0.1.31",
   "description": "Diff and patch the DOM",
   "keywords": [],
   "homepage": "https://github.com/dashkite/flashdom#readme",
@@ -32,6 +32,7 @@
     "release": "genie release"
   },
   "devDependencies": {
+
     "@dashkite/amen": "0.2.2",
     "@dashkite/amen-console": "0.0.2",
     "@dashkite/assert": "0.1.4",
@@ -44,5 +45,6 @@
   "dependencies": {
     "@dashkite/generic": "0.9.17",
     "@dashkite/joy": "0.11.0"
+
   }
 }
