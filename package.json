@@ -42,7 +42,7 @@
     "@dashkite/genie-release": "0.5.0"
   },
   "dependencies": {
-    "@dashkite/generic": "0.9.17",
+    "@dashkite/generic": "0.9.32",
     "@dashkite/joy": "0.12.40"
   }
 }
