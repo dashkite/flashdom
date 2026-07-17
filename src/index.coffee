@@ -1,16 +1,8 @@
 import * as Fn from "@dashkite/joy/function"
-import * as Time from "@dashkite/joy/time"
 import Generic from "@dashkite/generic"
 import * as Arr from "@dashkite/joy/array"
 
 $ = ( selector ) -> document.querySelector selector
-
-Log =
-  duration: ( action, { duration }) ->
-    console.log "%cflashdom: 
-      #{ action } in
-      #{ duration.toFixed 3 }ms",
-      "color: cyan;"
 
 Types =
 
@@ -150,23 +142,16 @@ flash = Fn.curry Fn.binary do ->
   ( Generic.make "flashdom" )
   
     .define [ Node, Node ], ( target, node ) ->
-      Log.duration "DOM updated", 
-        Time.measure "flashdom", ->
-          patch diff target, [ node ]
+      patch diff target, [ node ]
       
     .define [ Node, Array ], ( target, nodes ) ->
-      Log.duration "DOM updated", 
-        Time.measure "flashdom", ->
-          patch diff target, nodes
+      patch diff target, nodes
 
     .define [( -> true ), String ], ( target, source ) ->
-      elements = undefined
-      Log.duration "HTML parsed", 
-        Time.measure "html parse", ->
-          elements = Document
-            .parseHTMLUnsafe source
-            .body
-            .children
+      elements = Document
+        .parseHTMLUnsafe source
+        .body
+        .children
       flash target, [ elements... ]
         
     .define [ String, ( -> true ) ], ( target, html ) ->
